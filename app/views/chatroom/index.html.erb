@@ -11,34 +11,18 @@ Say something
             <div class="ui  feed">
                 
                     
+                   
+                    <% @messages.each do |m|%>
                     <div class="event">
                         <div class="content">
                             <div class="summary">
-                                <a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
+                                <h4><%= m.user.username%>: <%=m.body%></h4>
                             </div>
                         </div>
                     </div>
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary">
-                                <a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary">
-                                <a>Helen Troy</a> added <a>Christian Rocha</a> as a friend
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary">
-                                <a>Christian Rocha</a> signed up for the  site.
-                            </div>
-                        </div>
-                    </div>
+                    <%end%>
+
+                    
                 </div>
                 </div>
             </div>
